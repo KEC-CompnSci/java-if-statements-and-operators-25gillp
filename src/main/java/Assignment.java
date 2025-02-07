@@ -10,7 +10,13 @@ public class Assignment {
      */
     public static double calculateMovieNight() {
         // TODO: Implement this method
-        return 0.0;
+        double adultTick = 12.50;
+        double childTick = 8.00;
+        double largePop = 7.75 ;
+
+        double total = (2 * adultTick) + (3 * childTick) + largePop;
+
+        return total;
     }
 
     /**
@@ -21,7 +27,7 @@ public class Assignment {
      */
     public static boolean canRentCar(int age) {
         // TODO: Implement this method
-        return false;
+        return age >= 25;
     }
 
     /**
@@ -32,7 +38,7 @@ public class Assignment {
      */
     public static boolean isValidPasswordLength(String password) {
         // TODO: Implement this method
-        return false;
+        return password.length() >= 8;
     }
 
     /**
@@ -44,7 +50,7 @@ public class Assignment {
      */
     public static boolean needsOilChange(int mileage, int lastChangeMileage) {
         // TODO: Implement this method
-        return false;
+        return (mileage - lastChangeMileage) >= 5000;
     }
 
     /**
@@ -54,7 +60,11 @@ public class Assignment {
      */
     public static String getDivisibleByThreeMessage(int number) {
         // TODO: Implement this method
-        return "";
+        if (number % 3 == 0) {
+            return "Divisible by 3";
+        } else {
+            return "";
+        };
     }
 
     /**
@@ -66,7 +76,20 @@ public class Assignment {
      */
     public static String getLeapYearMessage(int year) {
         // TODO: Implement this method
-        return "";
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    return "Leap Year";
+                }
+                return "Not Leap Year";
+            } else {
+                return "Not Leap Year";
+            }
+            return "Leap Year";
+        }else{
+            return "Not Leap Year";
+        };
+
     }
 
     /**
@@ -77,6 +100,15 @@ public class Assignment {
      */
     public static String getTicketPriceCategory(int age) {
         // TODO: Implement this method
-        return "";
+        if (age < 5){
+            return "Free";
+        } else if (age >= 5 && age <= 12){
+            return "Child Price";
+        } else if (age >= 13 && age <= 22){
+            return "Student Price";
+        } else{
+            return "Adult Price";
+        };
+
     }
 }
