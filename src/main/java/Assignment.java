@@ -12,7 +12,7 @@ public class Assignment {
         // TODO: Implement this method
         double adultTick = 12.50;
         double childTick = 8.00;
-        double largePop = 7.75 ;
+        double largePop = 7.25 ;
 
         double total = (2 * adultTick) + (3 * childTick) + largePop;
 
@@ -64,7 +64,7 @@ public class Assignment {
             return "Divisible by 3";
         } else {
             return "";
-        };
+        }
     }
 
     /**
@@ -77,18 +77,16 @@ public class Assignment {
     public static String getLeapYearMessage(int year) {
         // TODO: Implement this method
         if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                    return "Leap Year";
-                }
-                return "Not Leap Year";
-            } else {
+            if (year % 100 == 0 && year % 400 == 0){
+                return "Leap Year";
+            }
+            if (year % 100 == 0 && year % 400 != 0){
                 return "Not Leap Year";
             }
             return "Leap Year";
         }else{
             return "Not Leap Year";
-        };
+        }
 
     }
 
@@ -104,11 +102,11 @@ public class Assignment {
             return "Free";
         } else if (age >= 5 && age <= 12){
             return "Child Price";
-        } else if (age >= 13 && age <= 22){
+        } else if (age >= 13 && age <= 21){
             return "Student Price";
         } else{
             return "Adult Price";
-        };
+        }
 
     }
 }
